@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="80" started-at="2020-05-11T18:17:48 IST" finished-at="2020-05-11T18:17:48 IST">
+    <groups>
+    </groups>
+    <test name="Annotations" duration-ms="80" started-at="2020-05-11T18:17:48 IST" finished-at="2020-05-11T18:17:48 IST">
+      <class name="TestAnnotations.Annotations">
+        <test-method status="PASS" signature="preRequisite()[pri:0, instance:TestAnnotations.Annotations@1f28c152]" name="preRequisite" is-config="true" duration-ms="14" started-at="2020-05-11T18:17:48 IST" finished-at="2020-05-11T18:17:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preRequisite -->
+        <test-method status="PASS" signature="mainFlow()[pri:0, instance:TestAnnotations.Annotations@1f28c152]" name="mainFlow" duration-ms="9" started-at="2020-05-11T18:17:48 IST" finished-at="2020-05-11T18:17:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mainFlow -->
+        <test-method status="PASS" signature="subFlow()[pri:0, instance:TestAnnotations.Annotations@1f28c152]" name="subFlow" duration-ms="1" started-at="2020-05-11T18:17:48 IST" finished-at="2020-05-11T18:17:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subFlow -->
+        <test-method status="PASS" signature="finalRequisite()[pri:0, instance:TestAnnotations.Annotations@1f28c152]" name="finalRequisite" is-config="true" duration-ms="0" started-at="2020-05-11T18:17:48 IST" finished-at="2020-05-11T18:17:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalRequisite -->
+      </class> <!-- TestAnnotations.Annotations -->
+    </test> <!-- Annotations -->
+  </suite> <!-- Suite -->
+</testng-results>

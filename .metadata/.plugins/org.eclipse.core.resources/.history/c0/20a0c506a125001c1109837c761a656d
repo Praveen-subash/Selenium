@@ -1,0 +1,25 @@
+package SampleProgramss;
+
+public class Anagram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String a = "Hello";
+		String b = "Hlleo";
+		
+		if(a.length()!=b.length()) {
+			
+			System.out.println("Not an anagram");
+			
+		}
+		
+		else {
+			
+			String[] arr1 = a.toCharArray();
+			
+		}
+
+	}
+
+}

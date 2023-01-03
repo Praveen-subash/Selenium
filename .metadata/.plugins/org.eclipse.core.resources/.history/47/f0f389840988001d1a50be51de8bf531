@@ -1,0 +1,17 @@
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Misc_Topics {
+	
+	public static void main (String[] args) {
+		
+		
+		ChromeOptions c = new ChromeOptions();
+		
+		
+		WebDriver driver = new ChromeDriver();
+		
+		
+	}
+
+}

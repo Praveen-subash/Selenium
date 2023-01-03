@@ -1,0 +1,79 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Selenium4_Arrays_ArrayLists {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Arrays
+		int[] arr1 = new int[3];
+		arr1[0] = 1;
+		arr1[1] = 2;
+		arr1[2] = 3;
+		
+		String[] arr2 = {"M","L","A"};
+		
+		for(int i=0;i<arr1.length;i++) {
+			
+			System.out.println(arr1[i]);
+		}
+		
+		for(String j:arr2) {
+			
+			System.out.println(j);
+		}
+		
+		//ArrayLists
+		ArrayList<Integer> aList = new ArrayList();
+		aList.add(9);
+		aList.add(10);
+		
+		for(int i=0;i<aList.size();i++) {
+			
+			System.out.println(aList.get(i));
+		}
+		
+		ArrayList<String> bList = new ArrayList();
+		bList.add("C");
+		bList.add("D");
+		
+		for(String j:bList) {
+			
+			System.out.println(j);
+		}
+		
+		//ARRAY TO ARRAYLISTS for  INT,CHAR ETC
+		
+		//Since arrays accept Primitives and arrayLists accept objects, Arrays.AsList is applicable only for String
+		//For int, follow the below approach
+		List list1 = new ArrayList(arr1.length);
+		for(int i:arr1) {
+			
+			list1.add(i);
+			
+		}
+		
+		System.out.println(list1);
+		
+		// SEE WHAT HAPPENS WHEN YOU CONVERT INT ARRAY TO ARRAYLIST USING Arrays.asList
+		List list3 = Arrays.asList(arr1);
+		System.out.println(list3);
+		
+		//Array to Array Lists for STRING
+		List list2 = Arrays.asList(arr2);
+		System.out.println(list2);
+		
+		//ARRAYLISTS TO ARRAY
+		int[] arrNew = new int[aList.size()];
+		
+		for(int i:aList) {
+			
+			
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,23 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s = "selenium";
+		
+		String rev = "";
+		
+		char[] ch = s.toCharArray();
+		
+		for(int t=ch.length-1;t>=0;t--) {
+			
+			rev =  rev+ch[t];
+			
+		}
+		
+		System.out.println(rev);
+
+	}
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="59" started-at="2021-09-22T21:43:56 IST" finished-at="2021-09-22T21:43:56 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="59" started-at="2021-09-22T21:43:56 IST" finished-at="2021-09-22T21:43:56 IST">
+      <class name="TestPackage.advancedTestNG3">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestPackage.advancedTestNG3@1f28c152]" name="beforeClass" is-config="true" duration-ms="9" started-at="2021-09-22T21:43:56 IST" finished-at="2021-09-22T21:43:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="methodRandom()[pri:0, instance:TestPackage.advancedTestNG3@1f28c152]" name="methodRandom" duration-ms="7" started-at="2021-09-22T21:43:56 IST" finished-at="2021-09-22T21:43:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodRandom -->
+        <test-method status="PASS" signature="typeRandom()[pri:3, instance:TestPackage.advancedTestNG3@1f28c152]" name="typeRandom" duration-ms="1" started-at="2021-09-22T21:43:56 IST" finished-at="2021-09-22T21:43:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- typeRandom -->
+        <test-method status="PASS" signature="abcRandom()[pri:7, instance:TestPackage.advancedTestNG3@1f28c152]" name="abcRandom" duration-ms="1" started-at="2021-09-22T21:43:56 IST" finished-at="2021-09-22T21:43:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abcRandom -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestPackage.advancedTestNG3@1f28c152]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-09-22T21:43:56 IST" finished-at="2021-09-22T21:43:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- TestPackage.advancedTestNG3 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

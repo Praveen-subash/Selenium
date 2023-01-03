@@ -1,0 +1,34 @@
+class Geek{ 
+      
+    public static String geekName = ""; 
+      
+    public static void geek(String name){ 
+          
+        geekName = name; 
+    } 
+} 
+
+
+
+
+public class Dummy {
+
+	public static String geekName = "aaa"; 
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Accessing the static method geek() and  
+        // field by class name itself. 
+        //Geek.geek("vaibhav");  
+        System.out.println(Geek.geekName); 
+        System.out.println(geekName); 
+         
+        // Accessing the static method geek() by using Object's reference. 
+        Geek obj = new Geek(); 
+        obj.geek("mohit"); 
+        System.out.println(obj.geekName);    
+
+	}
+
+}

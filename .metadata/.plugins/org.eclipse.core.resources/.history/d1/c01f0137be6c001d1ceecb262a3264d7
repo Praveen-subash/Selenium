@@ -1,0 +1,74 @@
+import java.time.Duration;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub	
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.spicejet.com/");
+		
+		//Count of radio buttons
+		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		WebDriverWait w = new WebDriverWait(driver,TimeUnit.SECONDS);
+		w.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.promoInfo"), "Code applied ..!"));
+		
+		
+		System.out.println(driver.findElements(By.xpath("//div[@class='css-1dbjc4n']/*[local-name()='svg']/*[local-name()='circle']")).size());
+		
+		//Get the radio button texts and click on Radio button which has Armed Forces option
+		List<WebElement> aList = driver.findElements(By.xpath("//div[@class='css-1dbjc4n']/*[local-name()='svg']/*[local-name()='circle']/ancestor::div[1]/following-sibling::div/div"));
+
+		for(int i=0;i<aList.size();i++) {
+
+			System.out.println(aList.get(i).getText());
+			System.out.println(driver.findElements(By.xpath("//div[@class='css-1dbjc4n']/*[local-name()='svg']")).get(i).isEnabled());
+			if(aList.get(i).getText().equals("Armed Forces")) {
+				
+				
+				driver.findElements(By.xpath("//div[@class='css-1dbjc4n']/*[local-name()='svg']/*[local-name()='circle']")).get(i).click();
+			}
+			
+//			if(aList.get(i).getText().equals("Health Professional")) {
+//				
+//				//div[@class='css-1dbjc4n']/*[local-name()='svg']/*[local-name()='circle'] does not give is enabled
+//				System.out.println(driver.findElements(By.xpath("//div[@class='css-1dbjc4n']/*[local-name()='svg']")).get(i).isEnabled());
+//				
+//			}
+			
+		}
+		
+		//Now get the the text of the radio button selected which should return Armed Forces
+		
+		List<WebElement> bList = driver.findElements(By.xpath("//div[@class='css-1dbjc4n']/*[local-name()='svg']/*[local-name()='g']/*[local-name()='circle'][2]"));
+		
+		System.out.println("No of radio buttons selected "+bList.size());
+		
+		
+		String xPathTxt = "//div[@class='css-1dbjc4n']/*[local-name()='svg']/*[local-name()='g']/*[local-name()='circle'][2]/ancestor::div[1]/following-sibling::div[1]/div";
+		
+		System.out.println("The text of the radio button selected "+driver.findElement(By.xpath(xPathTxt)).getText());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

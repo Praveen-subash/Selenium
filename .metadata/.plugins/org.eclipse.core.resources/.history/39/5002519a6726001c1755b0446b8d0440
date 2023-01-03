@@ -1,0 +1,22 @@
+package SampleProgramss;
+
+public class RemoveWhiteSpaces {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "I am going to London";
+		String str2="",str3="",str4="";
+		
+		//Replace will replace the character
+		//Replace all with replace a string itself
+		str2 = str.replace('a',' ');
+		str3= str.replaceAll("am", "pm");
+		str4 = str.replaceAll(" ", "");
+		
+		System.out.println(str2);
+		System.out.println(str3);
+		System.out.println(str4);
+	}
+
+}

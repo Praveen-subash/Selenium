@@ -1,0 +1,48 @@
+
+public class MainMethodInheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("String[] args is printed");
+		
+		
+	}
+
+
+}
+
+//Here, if you try to run CLass P, since it doesnt have main method, 
+//due to inheritance, MainMethodInheritancce class gets executed
+
+class P extends MainMethodInheritance {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("String[] args is printed");
+		
+		int num1 = 100;
+	    int num2 = ++num1;
+	    //num3 = num2++ + ++num1;
+
+	    System.out.println("num1 = " + num1);
+	    
+	    int a = 1;
+	    int b = 2;
+	    int c;
+	    int d;
+	    c = ++b;  
+	    d = a++;  
+	    c++; 
+	    System.out.println("a = " + a); //2 
+	    System.out.println("b = " + b); //3
+	    System.out.println("c = " + c); //4
+	    System.out.println("d = " + d); //
+	   
+	}
+	
+	
+	
+	
+}

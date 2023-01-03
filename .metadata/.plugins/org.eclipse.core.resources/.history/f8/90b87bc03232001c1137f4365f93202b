@@ -1,0 +1,79 @@
+package com.Collections;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class HashMapSample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		/* This is how to declare HashMap */
+	      HashMap<Integer, String> hmap = new HashMap<Integer, String>();
+
+	      /*Adding elements to HashMap*/
+	      hmap.put(12, "Chaitanya");
+	      hmap.put(2, "Rahul");
+	      hmap.put(7, "Singh");
+	      hmap.put(49, "Ajeet");
+	      hmap.put(3, "Anuj");
+	      System.out.println(hmap);
+	      
+	      //METHOD 1 of hashmap
+	      Set s = hmap.keySet();
+	      System.out.println(s);
+	      
+	      //METHOD 2 of hashmap
+	      Collection c = hmap.values();
+	      System.out.println(c);
+	      
+	      //METHOD 3 of hashmap
+	      Set p = hmap.entrySet();
+	      System.out.println(p);
+	    		
+
+	      //A Map can't be traversed, so you need to convert it into Set using keySet() or entrySet() method.
+	      Set set = hmap.entrySet();
+	      Iterator iterator = set.iterator(); //Set is a collection so we have used iterator
+	      while(iterator.hasNext()) {
+	         Map.Entry mentry = (Map.Entry)iterator.next(); //Entry is a innerclass object of class. See the diagram in notes
+	         
+	         System.out.println("key is: "+ mentry.getKey() + " & Value is: "+mentry.getValue());
+	         
+	      }
+	      
+	      Set pset = hmap.entrySet();
+	      
+	      Iterator iter1 = pset.iterator();
+	      
+	      while(iter1.hasNext()) {
+	    	  
+	    	  Map.Entry m = (Entry) iter1.next();
+	    	  System.out.println(m.getKey());
+	      }
+	      
+	      
+
+	      /* Get values based on key*/
+	      String var= hmap.get(2);
+	      System.out.println("Value at index 2 is: "+var);
+
+	      /* Remove values based on key*/
+	      hmap.remove(3);
+	      System.out.println("Map key and values after removal:");
+	      Set set2 = hmap.entrySet();
+	      Iterator iterator2 = set2.iterator();
+	      while(iterator2.hasNext()) {
+	          Map.Entry mentry2 = (Map.Entry)iterator2.next();
+	          System.out.print("Key is: "+mentry2.getKey() + " & Value is: ");
+	          System.out.println(mentry2.getValue());
+	       }
+
+
+	}
+
+}

@@ -1,0 +1,18 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Misc_Topics {
+	
+	public static void main (String[] args) {
+		
+		
+		ChromeOptions c = new ChromeOptions();
+		c.setAcceptInsecureCerts(true);
+		
+		WebDriver driver = new ChromeDriver(c);
+		driver.get("https://expired.badssl.com/");
+		
+	}
+
+}

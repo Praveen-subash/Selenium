@@ -1,0 +1,56 @@
+package com.UserDefinedPackage;
+
+import com.TestPackage.CentralTrafficInterface;
+
+public class IndiaTrafficInterface implements CentralTrafficInterface {
+	
+	//If you add unimplemented methods from the class, these get populated
+		@Override
+		public void greenGo() {
+			// TODO Auto-generated method stub
+			System.out.println("Green means go");
+			
+		}
+
+		
+
+		@Override
+		public void RedGo() {
+			// TODO Auto-generated method stub
+			
+			System.out.println("Red means stop");
+			
+		}
+		
+		//Method which belongs to same class
+		public void IndiaMethod1() {
+			
+			System.out.println("I am from method m1");
+			
+			
+		}
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//We are creating an object for the class IndiaTraffic to implement the methods in CentralTraffic
+		//In general we create an object for the class IndiaTraffic to implement the methods in IndiaTraffic
+		CentralTrafficInterface ct =  new IndiaTrafficInterface();
+		
+		ct.OrangeGo();
+		ct.greenGo();
+		ct.RedGo();
+		
+		System.out.println(num1_Inter);
+		
+		//We are accessing the method IndiaMethod1 which is created and implemented in the same class.
+		// So we cannot use the variable ct
+		IndiaTrafficInterface it =  new IndiaTrafficInterface();
+		it.IndiaMethod1();
+		
+
+	}
+	
+	
+}
