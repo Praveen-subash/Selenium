@@ -12,55 +12,37 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.pageobjects.LandingPage;
+import com.pageobjects.ProductCatalogue;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class StandAloneTest {
+public class SubmitOrderTest {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		EdgeOptions e = new EdgeOptions();
-		e.addArguments("start-maximized");
-		
+		e.addArguments("start-maximized");	
 		WebDriverManager.edgedriver().setup();
 		WebDriver driver = new EdgeDriver(e);
-		
 		WebDriverWait w = new WebDriverWait(driver,Duration.ofSeconds(10));
 		
-		//Login
-		driver.get("https://rahulshettyacademy.com/client");
-		driver.findElement(By.id("userEmail")).sendKeys("Tapamth@gmail.com");
-		driver.findElement(By.id("userPassword")).sendKeys("Tapamth1!0");
-		driver.findElement(By.id("login")).click();
+		//Landing page - Login		
+		LandingPage landingPage = new LandingPage(driver);  //**7
+		landingPage.goTo(); //**11
+		landingPage.loginApplication("Tapamth@gmail.com","Tapamth1!0");  //**9
 		
-		w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='card-body']")));
 		
-		//Add items to cart
+		//Product catalogue - Add items to cart	
 		String[] arr = {"IPHONE", "ZARA"};
 		List<String> aList = Arrays.asList(arr);
 		
-		List<WebElement> ele = driver.findElements(By.xpath("//div[@class='card-body']"));
+		ProductCatalogue productCatalogue = new ProductCatalogue(driver); //*24
+		List<WebElement> ele = productCatalogue.getProductList();  //*25
 		
-		for(int i=0;i<ele.size();i++) {
+		productCatalogue.addProductsToCart(aList);  //**30
 
-			String itemName = driver.findElements(By.xpath("//div[@class='card-body']//h5/b")).get(i).getText().split(" ")[0];
-			System.out.println(itemName);
-			
-			if(aList.contains(itemName)) {
-				
-				System.out.println("Item "+itemName+" is available in the list");
-				
-				driver.findElements(By.xpath("//button[text()=' Add To Cart']")).get(i).click();
-				
-				
-				w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div#toast-container")));
-				w.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div#toast-container")));
-			
-			}			
-			
-			
-			
-		}
 		
 		driver.findElement(By.xpath("//button[@routerlink='/dashboard/cart']")).click();
 		w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Continue Shopping']")));
