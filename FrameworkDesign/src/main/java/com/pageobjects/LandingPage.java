@@ -34,11 +34,15 @@ public class LandingPage extends AbstractComponent {  //**16
 	@FindBy(id="login")    //**5
 	WebElement submit;
 	
-	public void loginApplication(String userName, String password) {  //**8
+	public ProductCatalogue loginApplication(String userName, String password) {  //**8
 		
 		userEmail.sendKeys(userName);  
 		passwordEle.sendKeys(password);
 		submit.click();
+		
+		return new ProductCatalogue(driver);  //**61 (Here, instead of creating objects in the tests, we are
+		                                               // creating objects in the previous page object page itself)
+		//So the return type is ProductCatalogue
 	}
 	
 	public void goTo() { //**10

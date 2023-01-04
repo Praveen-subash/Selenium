@@ -12,6 +12,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.pageobjects.CartPage;
+import com.pageobjects.CheckoutPage;
+import com.pageobjects.ConfirmationPage;
 import com.pageobjects.LandingPage;
 import com.pageobjects.ProductCatalogue;
 
@@ -26,96 +29,40 @@ public class SubmitOrderTest {
 		e.addArguments("start-maximized");	
 		WebDriverManager.edgedriver().setup();
 		WebDriver driver = new EdgeDriver(e);
-		WebDriverWait w = new WebDriverWait(driver,Duration.ofSeconds(10));
 		
-		//Landing page - Login		
+		//Landing page
 		LandingPage landingPage = new LandingPage(driver);  //**7
 		landingPage.goTo(); //**11
-		landingPage.loginApplication("Tapamth@gmail.com","Tapamth1!0");  //**9
+		ProductCatalogue productCatalogue = landingPage.loginApplication("Tapamth@gmail.com","Tapamth1!0");  //**9
+		//In 61 we have created a object for the next page and returning here.
 		
-		
-		//Product catalogue - Add items to cart	
+		//Product catalog page 	
 		String[] arr = {"IPHONE", "ZARA"};
 		List<String> aList = Arrays.asList(arr);
-		
-		ProductCatalogue productCatalogue = new ProductCatalogue(driver); //*24
-		List<WebElement> ele = productCatalogue.getProductList();  //*25
-		
+//		ProductCatalogue productCatalogue =  new ProductCatalogue();
+		productCatalogue = new ProductCatalogue(driver); //*24
+		productCatalogue.getProductList();
 		productCatalogue.addProductsToCart(aList);  //**30
+		CartPage cartPage = productCatalogue.goToCartPage(); //**34 as per inheritance even productCatalogue has access
+		//In 63 we have created a object for the next page and returning here.
+		
+		//Cart Page
+//		CartPage cartPage = new CartPage(driver); //**35
+		cartPage.waitForCartPageToLoad();  //**36
+		cartPage.verifyProductDisplay(aList);  //**37
+		CheckoutPage checkout = cartPage.goToCheckout(); //**43
+		//In 64 we have created a object for the next page and returning here.
+		
+		//Checkout Page
+//		CheckoutPage checkout = new CheckoutPage(driver);  //**48
+		checkout.selectCountry("India");
+		ConfirmationPage confirmationPage = checkout.submitOrder();  //**53
+		//In 65 we have created a object for the next page and returning here.
+		
+		//Confirmation Page
+//		ConfirmationPage confirmationPage = new ConfirmationPage(driver); //**59
+		Assert.assertEquals(confirmationPage.getConfirmationMessage(), "THANKYOU FOR THE ORDER.");  //**60
 
-		
-		driver.findElement(By.xpath("//button[@routerlink='/dashboard/cart']")).click();
-		w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Continue Shopping']")));
-		
-		
-		//Check if the added items are available in the cart
-		List<WebElement> itemsListInTheCart = driver.findElements(By.xpath("//div[@class='cartSection']/h3"));
-		
-		if(itemsListInTheCart.size()==aList.size()) {
-			
-			
-			System.out.println("The no of items in the cart matches with the added items");
-			
-			for(int i=0;i<itemsListInTheCart.size();i++) {
-				
-				String cartItem = itemsListInTheCart.get(i).getText().split(" ")[0].trim(); 	
-				
-				if(aList.contains(cartItem)) {
-					
-					System.out.println("The item "+cartItem+" is available in the cart");
-				}
-				
-				else {
-					
-					System.out.println("The item "+cartItem+" is NOT available in the cart");
-				}
-				
-			}
-			
-		}
-		
-		
-		
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".totalRow button")));
-		
-		w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Apply Coupon']")));
-		
-		driver.findElement(By.xpath("//input[@placeholder='Select Country']")).sendKeys("India");
-		
-		Thread.sleep(2000);
-		
-		if(driver.findElement(By.cssSelector("[class*=ta-results]")).isDisplayed()) {
-			
-			js.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.cssSelector("[class*=ta-results]>button>span")));
-			
-			List<WebElement> dropDownList = driver.findElements(By.cssSelector("[class*=ta-results]>button>span"));
-			
-			for(int i=0;i<dropDownList.size();i++) {
-				
-				if(dropDownList.get(i).getText().equalsIgnoreCase("India")) {
-					
-					dropDownList.get(i).click();
-				}
-				
-			}
-			
-		}
-		
-		
-		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//a[contains(@class,'action__submit')]")));
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[text()='Place Order ']")).click();
-		
-		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h1.hero-primary")));
-		
-		String confirmTxt = driver.findElement(By.cssSelector("h1.hero-primary")).getText();
-		
-		Assert.assertEquals(confirmTxt.trim(), "THANKYOU FOR THE ORDER.");
-		
-		
-
-		
 	}
 
 }

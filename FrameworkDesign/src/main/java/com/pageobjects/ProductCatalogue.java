@@ -38,6 +38,7 @@ public class ProductCatalogue extends AbstractComponent {   //**17 extending Abs
 	@FindBy(xpath="//button[text()=' Add To Cart']")  //**28
 	List<WebElement> addToCart;
 	
+
 	By waitForProductAddedToken = By.cssSelector("div#toast-container");  //**29
 	
 
@@ -67,6 +68,8 @@ public class ProductCatalogue extends AbstractComponent {   //**17 extending Abs
 		
 		
 	}
+	
+	
 	
 	
 	
