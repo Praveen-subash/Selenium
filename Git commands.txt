@@ -77,5 +77,5 @@ git branch -d developmentBranch
 'This will delete the branch from local. From git it wont get deleted
 
 git push origin -delete "developmentBranch"
-'This will remove the branch from git
+'This will delete the branch
 
