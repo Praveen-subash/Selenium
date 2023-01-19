@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-06T10:55:24 IST" name="Suite" finished-at="2023-01-06T10:55:29 IST" duration-ms="5195">
+    <groups>
+      <group name="Error Validation">
+        <method signature="ErrorValidationsTest.LoginErrorValidation()[pri:0, instance:com.tests.ErrorValidationsTest@581ac8a8]" name="LoginErrorValidation" class="com.tests.ErrorValidationsTest"/>
+      </group> <!-- Error Validation -->
+    </groups>
+    <test started-at="2023-01-06T10:55:24 IST" name="Submit Order Test" finished-at="2023-01-06T10:55:24 IST" duration-ms="6">
+    </test> <!-- Submit Order Test -->
+    <test started-at="2023-01-06T10:55:24 IST" name="Error Validations Test" finished-at="2023-01-06T10:55:29 IST" duration-ms="5195">
+      <class name="com.tests.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.tests.ErrorValidationsTest@581ac8a8]" started-at="2023-01-06T10:55:24 IST" name="launchApplication" finished-at="2023-01-06T10:55:28 IST" duration-ms="4364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="LoginErrorValidation()[pri:0, instance:com.tests.ErrorValidationsTest@581ac8a8]" started-at="2023-01-06T10:55:28 IST" name="LoginErrorValidation" finished-at="2023-01-06T10:55:29 IST" duration-ms="787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidation -->
+      </class> <!-- com.tests.ErrorValidationsTest -->
+    </test> <!-- Error Validations Test -->
+  </suite> <!-- Suite -->
+</testng-results>
