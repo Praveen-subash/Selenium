@@ -1,13 +1,13 @@
 **************************** The below commands are steps when you setup a fresh repository **********************
 
 git config --global user.name "Praveen"
-'This is used to set the username. Global is used to access from any location
+'This is used to set the username. Global is used to access from any location. Else git asks for credentials everytime gitPush is done.
 
 git config --global user.email "spraveen879@gmail.com"
-'This is used to set the email. Global is used to access from any location
+'This is used to set the email. Global is used to access from any location. Else git asks for credentials everytime gitPush is done.
 
 git init
-'This is used to create a new repository. Created .git file in the folder. Should be executed from the location where ffiles for git push are available
+'This is used to create a new repository. Created .git file in the folder. Should be executed from the location where files for git push are available
 
 git add .
 'This adds the changes to the working directory
@@ -20,10 +20,14 @@ git commit --amend
 'Rewrites the previously commited changes
 
 git remote add origin https://github.com/Praveen-subash/gitBasicsSelenium.git
-'Create a connection to the remote repository by specifying the origin
+'Specifying the location of your repository. Here origin is an alias/alternate name for your remote repository so that you don't have to type the entire path for 
+remote every time and henceforth you are declaring that you will use this name(origin) to refer to your remote. 
 
 git push origin master
 'Pushing the code to origin which is specified above and to the master
+
+git log
+'Used to check the push history of the code
 
 **************************** The below commands are steps when you make changes to existing repository **********************  
 
@@ -38,11 +42,16 @@ git push origin master
 
 **************************** The below commands are steps when you create a new branch **********************  
 
-git checkout -b developmentBranch
-'This creates a new branch called developmentBranch
+git branch developmentBranch
+'This creates a new branch
+
+git checkout developmentBranch
+'This moves the control to the new branch
 
 git branch
 'This displays the existing branch we are working on
+
+ALWAYS NOTE THAT IN THE BRANCH WHEN YOU PUSH THE CODE IT HAS ALL THE CODE OF master BRANCH AND THEN ADDS THE NEW CODE THAT YOU HAVE PUSHED TO THAT BRANCH
 
 git add *
 git commit -m "Pushing new branch code"
@@ -51,18 +60,22 @@ git commit -m "Pushing new branch code"
 git push origin developmentBranch
 'This will push the new code to developmentBranch branch
 
-**************************** The below commands are steps when you make updates to the existing branch **********************  
+**************************** The below commands are steps to merge the existing branch **********************  
 
-git checkout developmentBranch
-'The above command to used to switch to particular branch.
+git checkout master
+'This command now transfers the control to master branch. We are transferring so that the code is ready to be merged with the branch
 
-git branch
-'This displays the existing branch we are working on
+git merge developmentBranch
+'This will merge the developmentBranch with the master
 
-git add *
-git commit -m "Pushing new branch code"
-'This asusual
+git push origin master
+'Now the merged code is pushed
 
-git push origin developmentBranch
-'This will push the updated code to developmentBranch branch
+NOW IF YOU CHECK BRANCH IN GIT, IT SHOWS MESSAGE 'THIS IS EVEN WITH MASTER'
+
+git branch -d developmentBranch
+'This will delete the branch from local. From git it wont get deleted
+
+git push origin -delete "developmentBranch"
+'This will remove the branch from git
 
