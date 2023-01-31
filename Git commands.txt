@@ -79,3 +79,5 @@ git branch -d developmentBranch
 git push origin -delete "developmentBranch"
 'Delete the created branch
 
+**************************** END OF COMMANDS ********************** 
+
