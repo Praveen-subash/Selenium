@@ -63,10 +63,15 @@ git push origin developmentBranch
 **************************** The below commands are steps to merge the existing branch **********************  
 
 git checkout master
-'This command now transfers the control to master branch. We are transferring so that the code is ready to be merged with the branch
+'ALWAYS COME TO DESTINATION BRANCH IF YOU WANT TO MERGE. This command now transfers the control to master branch.
+
+'git pull
+This would bring the latest code to the master now
 
 git merge developmentBranch
 'This will merge the developmentBranch with the master
+
+[IT IS AT THIS PLACE CONFLICT OCCURS. WHEN THERE IS A CONFLICT, YOU CAN EITHER RESOLVE BY CREATING A PULL REQUEST OR THRO GIT BASH OR ECLIPSE]
 
 git push origin master
 'Now the merged code is pushed
@@ -79,5 +84,7 @@ git branch -d developmentBranch
 git push origin -delete "developmentBranch"
 'Delete the created branch
 
-**************************** END OF COMMANDS ********************** 
+
+**************************** THE END **********************  
+
 
