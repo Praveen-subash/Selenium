@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -5,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -13,8 +15,11 @@ public class Child_Window {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Setup\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Setup\\chromedriver.exe");
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriver driver = new ChromeDriver(options);
 		
 		driver.get("https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp");
 		By ele = By.cssSelector("span.CwaK9");
@@ -63,7 +68,7 @@ public class Child_Window {
 	private static void explicit_Wait(WebDriver driver, By ele, String str) {
 		// TODO Auto-generated method stub
 		
-		WebDriverWait w = new WebDriverWait(driver,10);
+		WebDriverWait w = new WebDriverWait(driver,Duration.ofSeconds(10));
 		w.until(ExpectedConditions.visibilityOfElementLocated(ele));
 		System.out.println(str);
 		

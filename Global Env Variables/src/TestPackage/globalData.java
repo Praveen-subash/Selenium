@@ -18,7 +18,9 @@ public class globalData {
 		
 		//We need to Specify the path whether .properties is present to the properties class 
 		//Create a file input stream and pass it to properties 
-		FileInputStream fis = new FileInputStream("D:\\Selenium\\Global Env Variables\\src\\TestPackage\\file.properties");
+		System.out.println(System.getProperty("user.dir"));
+		
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\TestPackage\\file.properties");
 		prop.load(fis);
 		
 		String s = prop.getProperty("name"); //Assume name as key. Praveen as value
@@ -35,7 +37,7 @@ public class globalData {
 		
 		//After thiis, value for name gets updated in .properties file
 		//To change the value in properties file for an existing key. 
-		FileOutputStream fos = new FileOutputStream("D:\\Selenium\\Global Env Variables\\src\\TestPackage\\file.properties");
+		FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir")+"\\src\\TestPackage\\file.properties");
 		//Values changed is comments
 		prop.store(fos, "Values changed");
 		

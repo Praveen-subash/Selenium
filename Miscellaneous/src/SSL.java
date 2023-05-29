@@ -17,20 +17,16 @@ public class SSL {
 		// TODO Auto-generated method stub
 		//Desired capabilities is class which helps to customize the chrome browser
 		
-		DesiredCapabilities ch=DesiredCapabilities.chrome();
-		//ch.acceptInsecureCerts(); //Also done with this
-		ch.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-		ch.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		
+		
+		
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		
+		options.setAcceptInsecureCerts(true);  
+		WebDriver driver = new ChromeDriver(options);
 
-		//Belongs to your local browser
-		ChromeOptions c= new ChromeOptions();
-		c.merge(ch);  //Set the capabilities to the local browser
-		
-		
-		
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Setup\\chromedriver.exe");
-		WebDriver driver=new ChromeDriver(c); //Pass the object
 		
 		
 	}
