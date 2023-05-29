@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (3)" project="CucumberRegEx" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="cucumberOptions.TestRunner" time="0.149">
-    <testsuite name="Application login" time="0.149">
-      <testcase name="Home Page default login #1" classname="Application login" time="0.143"/>
-      <testcase name="Home Page default login #2" classname="Application login" time="0.006"/>
-    </testsuite>
-  </testsuite>
-</testrun>

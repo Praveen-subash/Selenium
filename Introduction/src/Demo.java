@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Demo {
 
@@ -9,8 +10,9 @@ public class Demo {
 		//SELENIUM CODE
 		
 	    // Create Driver Object for Chrome Browser
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Setup\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver(); //Create a class for chrome driver
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriver driver = new ChromeDriver(options);
 		driver.get("http://www.google.com"); //To reach the URL
 		System.out.println(driver.getTitle());  //To get the page title
 		System.out.println(driver.getCurrentUrl()); // TO get the current URL

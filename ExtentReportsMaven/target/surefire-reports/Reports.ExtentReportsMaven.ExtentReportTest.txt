@@ -1,4 +1,37 @@
 -------------------------------------------------------------------------------
 Test set: Reports.ExtentReportsMaven.ExtentReportTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.411 s - in Reports.ExtentReportsMaven.ExtentReportTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.76 s <<< FAILURE! - in Reports.ExtentReportsMaven.ExtentReportTest
+initialSetup(Reports.ExtentReportsMaven.ExtentReportTest)  Time elapsed: 9.274 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 107
+Current browser version is 111.0.5563.64 with binary path C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6EA9O54', ip: '192.168.29.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00D9ACD3+2075859]
+	Ordinal0 [0x00D2EE61+1633889]
+	Ordinal0 [0x00C2B7BD+571325]
+	Ordinal0 [0x00C4DFCD+712653]
+	Ordinal0 [0x00C49266+692838]
+	Ordinal0 [0x00C46BE9+682985]
+	Ordinal0 [0x00C7DBD3+908243]
+	Ordinal0 [0x00C7D6AA+906922]
+	Ordinal0 [0x00C77136+880950]
+	Ordinal0 [0x00C4FEFD+720637]
+	Ordinal0 [0x00C50F3F+724799]
+	GetHandleVerifier [0x0104EED2+2769538]
+	GetHandleVerifier [0x01040D95+2711877]
+	GetHandleVerifier [0x00E2A03A+521194]
+	GetHandleVerifier [0x00E28DA0+516432]
+	Ordinal0 [0x00D3682C+1665068]
+	Ordinal0 [0x00D3B128+1683752]
+	Ordinal0 [0x00D3B215+1683989]
+	Ordinal0 [0x00D46484+1729668]
+	BaseThreadInitThunk [0x772D7D69+25]
+	RtlInitializeExceptionChain [0x77A2BB9B+107]
+	RtlClearBits [0x77A2BB1F+191]
+
+	at Reports.ExtentReportsMaven.ExtentReportTest.initialSetup(ExtentReportTest.java:49)
+

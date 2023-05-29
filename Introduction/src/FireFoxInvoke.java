@@ -1,4 +1,6 @@
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class FireFoxInvoke {
@@ -9,8 +11,9 @@ public class FireFoxInvoke {
 		//SELENIUM CODE
 		
 	// Create Driver Object for Chrome Browser
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Setup\\chromedriver.exe");
-		WebDriver driver = new FirefoxDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriver driver = new ChromeDriver(options);
 		driver.get("http://google.com");
 		System.out.println(driver.getTitle());
 	}

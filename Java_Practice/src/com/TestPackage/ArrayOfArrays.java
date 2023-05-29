@@ -41,7 +41,7 @@ package com.TestPackage;
 		//2D Array
 		int[][] b = {{1,2,3},{4,5,6},{7,8,9}};
 		
-		System.out.println(b.length); // b.length is 3 where each value of b is a 2D array
+		System.out.println(b.length); // b.length is 3 where each value of b is a 1D array
 		//b[0] will have 1,2,3. b[1] will have 4,5,6. b[2] will have 7,8,9.
 		
 		
