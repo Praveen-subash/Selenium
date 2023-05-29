@@ -7,7 +7,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.testng.Assert;
@@ -65,8 +66,9 @@ public class ExtentReportDemo {
        public void passTest() throws IOException {
               
     	  ExtentTest Test = rep.createTest("TC 1");
-          System.setProperty("webdriver.gecko.driver", "C:\\Selenium\\Setup\\geckodriver.exe");
-          WebDriver driver = new FirefoxDriver();
+    	  ChromeOptions options = new ChromeOptions();
+  		options.addArguments("--remote-allow-origins=*");
+  		WebDriver driver = new ChromeDriver(options);
           driver.get("http://www.automationtesting.in");
           String s = driver.getTitle();
           Assert.assertEquals(s, "Home-Selenium Webdriver Appium Complete Tutorial");

@@ -1,8 +1,7 @@
-
-
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.Dimension;
 
 public class Parent {
 
@@ -37,8 +36,9 @@ public class Parent {
 		//If static is provided, it can be accessed directly
 		method1();		
 		
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Setup\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver(); 
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriver driver = new ChromeDriver(options);
 		driver.get("http://google.com");
 		
 		

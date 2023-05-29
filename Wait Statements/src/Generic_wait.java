@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -51,7 +52,7 @@ public class Generic_wait {
 		
 		//Explicit Wait
 		
-		WebDriverWait w = new WebDriverWait(driver,10);
+		WebDriverWait w = new WebDriverWait(driver,Duration.ofSeconds(50));
 		//w.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.promoInfo"), "Code applied ..!"));
 		w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Code applied ..!']")));
 		

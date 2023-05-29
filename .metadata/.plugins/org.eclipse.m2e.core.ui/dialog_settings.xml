@@ -86,4 +86,29 @@
 	</section>
 	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
 	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="Locators_and_Identifiers"/>
+			<item value="Calling_from_other_classes"/>
+			<item value="TestNG"/>
+			<item value="Dropdowns"/>
+			<item value="Deepdive"/>
+			<item value="Introduction"/>
+			<item value="Wait_Statements"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="Locators_and_Identifiers"/>
+			<item value="Calling_from_other_classes"/>
+			<item value="TestNG"/>
+			<item value="Dropdowns"/>
+			<item value="Deepdive"/>
+			<item value="Introduction"/>
+			<item value="Wait_Statements"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
 </section>
