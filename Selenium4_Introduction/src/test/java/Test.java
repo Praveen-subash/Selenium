@@ -13,6 +13,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -22,17 +24,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Test {
 	
-	////////////////////////////////////
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
 		
-		ChromeOptions options = new ChromeOptions();
+		EdgeOptions options= new EdgeOptions();
 		options.addArguments("incognito");
 		options.addArguments("--disable-geolocation");
 	    options.addArguments("disable-infobars");
 	    
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new EdgeDriver(options);
 		driver.get("https://www.spicejet.com/");
 		
 		
