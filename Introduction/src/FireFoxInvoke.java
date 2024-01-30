@@ -11,9 +11,9 @@ public class FireFoxInvoke {
 		//SELENIUM CODE
 		
 	// Create Driver Object for Chrome Browser
-		ChromeOptions options = new ChromeOptions();
+		EdgeOptions options = new EdgeOptions();
 		options.addArguments("--remote-allow-origins=*");
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new EdgeDriver(options);
 		driver.get("http://google.com");
 		System.out.println(driver.getTitle());
 	}
