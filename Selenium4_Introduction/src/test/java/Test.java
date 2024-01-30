@@ -37,7 +37,7 @@ public class Test {
 	    options.addArguments("disable-infobars");
 	    
 		WebDriver driver = new EdgeDriver(options);
-		driver.get("https://www.spicejet.com/");
+		driver.get("https://www.aha.com/");
 		
 		
 		}
