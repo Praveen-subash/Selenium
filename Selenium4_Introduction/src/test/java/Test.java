@@ -28,14 +28,15 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
 		
+
 		//THis is RS
 		
-		ChromeOptions options= new ChromeOptions();
+		EdgeOptions options= new EdgeOptions();
 		options.addArguments("incognito");
 		options.addArguments("--disable-geolocation");
 	    options.addArguments("disable-infobars");
 	    
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new EdgeDriver(options);
 		driver.get("https://www.spicejet.com/");
 		
 		
