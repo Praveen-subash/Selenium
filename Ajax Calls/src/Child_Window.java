@@ -12,8 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-//Selenium study da
-
+//i am leabing
 
 
 
