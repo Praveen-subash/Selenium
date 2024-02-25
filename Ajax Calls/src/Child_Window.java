@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-//Selenium 5.0
+//Selenium 5.0 no da
 
 
 
