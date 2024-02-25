@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-//JAVA
+//Selenium
 
 public class Child_Window {
 
@@ -18,7 +18,7 @@ public class Child_Window {
 		// TODO Auto-generated method stub
 		
 		//System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Setup\\chromedriver.exe");
-		//JAVA
+		
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
