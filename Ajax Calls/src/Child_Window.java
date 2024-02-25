@@ -16,6 +16,7 @@ public class Child_Window {
 		// TODO Auto-generated method stub
 		
 		//System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Setup\\chromedriver.exe");
+		//JAVA
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
