@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-//dont leave.. its time
+//this is for taking notes..
 
 
 
