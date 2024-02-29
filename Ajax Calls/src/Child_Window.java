@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-//wait dont hurry
+//i am going one step ahead
 
 
 
