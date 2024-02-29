@@ -12,7 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-//this is for taking notes..
+
+//wait dont hurry
 
 
 
