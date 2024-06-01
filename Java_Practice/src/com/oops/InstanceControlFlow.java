@@ -4,7 +4,7 @@ public class InstanceControlFlow {
 	
 	int i=10;  //3 (i=0)  //9 (i=20)
 	{          //4
-		m1();  //10
+		//m1();  //10
 		System.out.println("First Instance Block");  //12
 	}
 	

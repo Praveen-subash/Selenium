@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class ThrowKeyword {
 
-	 static void checkEligibilty(int stuage, int stuweight) throws IOException{ 
+	 static void checkEligibilty(int stuage, int stuweight) throws IOException  { 
 	      
 		 if(stuage<12 && stuweight<40) {
 	         throw new IOException("Student is not eligible for registration");  //If you throw checked exception which is IO

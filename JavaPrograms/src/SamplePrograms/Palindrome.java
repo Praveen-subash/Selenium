@@ -22,7 +22,7 @@ public class Palindrome {
         StringBuilder sb = new StringBuilder(original);
         System.out.println(sb.reverse());
         
-        if(original.equals(reverse)) 
+        if(sb.reverse().equals(reverse)) 
             System.out.println("The String is palindrome");
         else
             System.out.println("The String is not a palindrome");

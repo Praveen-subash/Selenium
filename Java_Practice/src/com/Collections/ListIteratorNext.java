@@ -27,17 +27,25 @@ public class ListIteratorNext {
             System.out.print(i + " ");
   
            
-            if (i%2==0)
-            {
-                i++;  
-                ltr.set(i);  // METHOD 3 of List Iterator. Replacing even no by next odd no
-                ltr.add(i);  // METHOD 4 of List Iterator. Adding one more to the list
-                
-            }
-            else {
-            	ltr.remove();
+//            if (i%2==0)
+//            {
+//            	i++; 
+//                ltr.set(i);  // METHOD 3 of List Iterator. Replacing even no by next odd no
+//                ltr.add(i);  // METHOD 4 of List Iterator. Adding one more to the list
+//                
+//                
+//            }
+//            else {
+//            	ltr.remove();
+//            	
+//            }
+            
+            if(i%2==0) {
             	
+            	ltr.set(i+1);
             }
+            
+            
         }
         System.out.println();
         System.out.println(al);

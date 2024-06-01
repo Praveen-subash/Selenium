@@ -13,6 +13,8 @@ class Parent{
 		
 	}
 	
+
+	
 	//parent class constructor
 	Parent(){
 		
@@ -44,6 +46,7 @@ public class SuperKeyword extends Parent {
 			System.out.println(name);	
 		//When you use super keyword, parent class variable gets printed
 			System.out.println(super.name);	
+			
 			
 				
 	}

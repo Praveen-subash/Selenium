@@ -15,8 +15,11 @@ public class ToCharArrayAndcharAtDifferencce {
 			
 			System.out.println(c);
 			
+			
 		}
+		
 		System.out.println("------");
+		
 		
 		for(int i=0;i<str.length();i++) {
 			

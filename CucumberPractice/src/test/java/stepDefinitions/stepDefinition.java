@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
 
-@RunWith(Cucumber.class)
+
 public class stepDefinition {
 
     @Given("^User is on Net Baanking Page$")

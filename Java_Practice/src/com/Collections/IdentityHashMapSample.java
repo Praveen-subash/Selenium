@@ -30,6 +30,8 @@ public class IdentityHashMapSample {
 	      lmap.put(I4, "Rahul");
 	      
 	      System.out.println(lmap);
+	      
+	      
 
 	}
 

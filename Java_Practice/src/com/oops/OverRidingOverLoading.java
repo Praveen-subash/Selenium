@@ -14,18 +14,18 @@ class A {
 
 class B extends A{
 	
-//	public void show(float y) 
-//	{ 
-//		System.out.println("child   " + y); 
-//	} 
+	public void show(float y) 
+	{ 
+		System.out.println("child   " + y); 
+	} 
 	
   //overriding - ex 2 ===========COMMENT FROM HERE==========
 	
-	public void show(int x) 
-	{ 
-		System.out.println("child  overriding " + x); 
-	} 
-	
+//	public void show(int x) 
+//	{ 
+//		System.out.println("child  overriding " + x); 
+//	} 
+//	
 	// ===========COMMENT TILL HERE==========
 	
 }

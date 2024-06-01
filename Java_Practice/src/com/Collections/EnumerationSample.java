@@ -1,6 +1,7 @@
 package com.Collections;
 
 import java.util.Enumeration;
+import java.util.Iterator;
 import java.util.Vector;
 
 public class EnumerationSample {
@@ -25,6 +26,16 @@ public class EnumerationSample {
   
             System.out.print(i + " ");
         }
+        
+        Iterator iter = v.iterator();
+        
+        while(iter.hasNext()) {
+        	
+        	int s = (int) iter.next();
+        	System.out.println("new "+s);
+        	
+        }
+        
 
 	}
 

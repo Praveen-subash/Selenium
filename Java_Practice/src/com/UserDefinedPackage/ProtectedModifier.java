@@ -11,6 +11,7 @@ public class ProtectedModifier {  //This should be public bcos this class needs 
 }
 	class B extends ProtectedModifier{
 		
+		
 		public static void main(String[] args){
 			
 			//valid since object is created for the parent class and method is called

@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 //features should have the featureFiles package. Dont specify the feature files in the path. Else, it'll take only that file
 //in glue, give the pack name alone. NOTE THAT THE STEP DEFINITION SHOULD BE IN THE SAME PARENT AS TEST RUNNER (src/test/java)
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/featureFiles",glue="stepDefinitions")
+@CucumberOptions(features="src/test/java/featureFiles",glue="src.test.java.stepDefinitions")
 
 public class TestRunner {
 	

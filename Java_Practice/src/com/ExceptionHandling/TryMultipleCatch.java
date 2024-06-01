@@ -1,8 +1,13 @@
 package com.ExceptionHandling;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
 public class TryMultipleCatch {
    public static void main(String args[]) {
       int num1, num2;
+     
       try {
          /* We suspect that this block of statement can throw 
           * exception so we handled it by placing these statements
@@ -17,6 +22,7 @@ public class TryMultipleCatch {
          /* This block will only execute if any Arithmetic exception 
           * occurs in try block
           */
+    	  e.printStackTrace();
          System.out.println("You should not divide a number by zero");
       }
       catch (Exception e) {
@@ -24,8 +30,12 @@ public class TryMultipleCatch {
           * all the exceptions. This will execute if the exception is not
           * handled by previous catch blocks.
           */
+    	  e.printStackTrace();
          System.out.println("Exception occurred");
       }
       System.out.println("==I'm out of try-catch block in Java==");
+      
    }
+   
+   
 }

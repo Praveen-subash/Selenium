@@ -12,7 +12,7 @@ public class RemoveRepeated {
 		
 		String s = "check";
 		
-		String[] str= new String[s.length()];
+		
 		String sv = "";
 		
 		char[] ch = s.toCharArray();
@@ -22,7 +22,7 @@ public class RemoveRepeated {
 		for(i=0;i<ch.length;i++)
 		{
 			
-			//Traversing from the back to original position. Only if loop completes j==i
+			//Traversing from the back to last to original position. Only if loop completes j==i
 			for(j=0;j<i;j++) {
 				
 				if(ch[i]==ch[j]) {

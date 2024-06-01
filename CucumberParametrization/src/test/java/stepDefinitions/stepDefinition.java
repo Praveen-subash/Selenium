@@ -12,7 +12,7 @@ import io.cucumber.junit.Cucumber;
 @RunWith(Cucumber.class)
 public class stepDefinition {
 
-    @Given("^User is on Net Baanking Page$")
+    @Given("User is on Net Baanking Page")
     public void user_is_on_net_baanking_page() throws Throwable {
         
     	System.out.println("Navigated to the login url");
@@ -29,7 +29,7 @@ public class stepDefinition {
     	System.out.println("Logged in using "+username+ " and " +password);
     }
 
-    @Then("^Home Page is displayed$")
+    @Then("Home Page is displayed")
     public void home_page_is_displayed() throws Throwable {
     	
     	System.out.println("Home page is displayed");
@@ -37,7 +37,7 @@ public class stepDefinition {
     }
     
     //Similarly we have passed with true false
-    @And("^Cards displayed are \"([^\"]*)\"$")
+    @And("Cards displayed are {string}")
     public void cards_are_displayed_are_something(String strArg1) throws Throwable {
     	System.out.println("Cards displayed as "+strArg1);
     	System.out.println("=======");
