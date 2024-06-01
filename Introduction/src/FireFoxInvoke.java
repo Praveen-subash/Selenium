@@ -1,6 +1,8 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class FireFoxInvoke {
@@ -11,9 +13,9 @@ public class FireFoxInvoke {
 		//SELENIUM CODE
 		
 	// Create Driver Object for Chrome Browser
-		ChromeOptions options = new ChromeOptions();
+		EdgeOptions options = new EdgeOptions();
 		options.addArguments("--remote-allow-origins=*");
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new EdgeDriver(options);
 		driver.get("http://google.com");
 		System.out.println(driver.getTitle());
 	}

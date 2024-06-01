@@ -4,6 +4,8 @@ public class SoftAssertion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
+		//Test user
 		
 		SoftAssert sf = new SoftAssert();
 		sf.assertTrue(false);

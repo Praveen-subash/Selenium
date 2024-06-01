@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SamplePOModel&apos; to &apos;PageObjectModel&apos;" description="Rename resource &apos;SamplePOModel&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SamplePOModel" name="PageObjectModel" stamp="1629685016814" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;LogiinPageFactory&apos; to &apos;PageFactory&apos;" description="Rename resource &apos;LogiinPageFactory&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/LogiinPageFactory" name="PageFactory" stamp="1629717214925" updateReferences="true"/>
-</session>
