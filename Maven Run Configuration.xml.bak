@@ -14,7 +14,7 @@ Run the tests with maven command "mvn clean test"
 
 CASE 2 : Run individual/particular test in maven
 
-command: mvn test -Dtestname="testname.java" | Example: mvn test -Dtestname = "ArrayTest.java".
+command: mvn -Dtest=<testname> test | Example: mvn -Dtest = Arrays test
 
 
 
