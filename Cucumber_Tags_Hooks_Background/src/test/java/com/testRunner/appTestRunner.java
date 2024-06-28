@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/com/feature",glue={"com/stepDefinition"},monochrome=true,plugin = {"html:target/cucumber.html"},tags="@Smoke and @Important")
+@CucumberOptions(features="src/test/java/com/feature",glue={"com.stepDefinition"},monochrome=true,plugin = {"html:target/cucumber.html"},tags="@Smoke and @Important")
 
 public class appTestRunner {
 	

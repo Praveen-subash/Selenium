@@ -63,7 +63,7 @@ public class basicsTestNG {
 		System.out.println("======================================");
 		
 	}
-
+	
 	@BeforeSuite
 	public void beforeSuite() {
 		
@@ -75,5 +75,10 @@ public class basicsTestNG {
 		
 		System.out.println("AFTER SUITE IS EXECUTED");
 	}
+	
+	
+
+
+	
 	
 }

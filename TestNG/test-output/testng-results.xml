@@ -1,33 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="10" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-16T14:03:33 IST" name="Default suite" finished-at="2024-05-16T14:03:33 IST" duration-ms="178">
+  <suite started-at="2024-06-28T09:09:32 IST" name="Suite" finished-at="2024-06-28T09:09:33 IST" duration-ms="590">
     <groups>
+      <group name="Smoke Testing">
+        <method signature="advancedTestNG4.Demo2()[pri:0, instance:TestPackage.advancedTestNG4@291caca8]" name="Demo2" class="TestPackage.advancedTestNG4"/>
+      </group> <!-- Smoke Testing -->
     </groups>
-    <test started-at="2024-05-16T14:03:33 IST" name="Default test" finished-at="2024-05-16T14:03:33 IST" duration-ms="178">
+    <test started-at="2024-06-28T09:09:32 IST" name="BasicTestCases" finished-at="2024-06-28T09:09:32 IST" duration-ms="305">
+      <class name="TestPackage.basicTestNG2">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="beforeMethod" finished-at="2024-06-28T09:09:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Demo1()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="Demo1" finished-at="2024-06-28T09:09:32 IST" duration-ms="12" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable must exist: D:\Selenium\Setup\chromedriver.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable must exist: D:\Selenium\Setup\chromedriver.exe
+at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:345)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:160)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:155)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:450)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:128)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at TestPackage.basicTestNG2.Demo1(basicTestNG2.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="afterMethod" finished-at="2024-06-28T09:09:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="beforeMethod" finished-at="2024-06-28T09:09:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Demo2()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="Demo2" finished-at="2024-06-28T09:09:32 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="afterMethod" finished-at="2024-06-28T09:09:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="beforeMethod" finished-at="2024-06-28T09:09:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Demo3()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="Demo3" finished-at="2024-06-28T09:09:32 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo3 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="afterMethod" finished-at="2024-06-28T09:09:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- TestPackage.basicTestNG2 -->
+      <class name="TestPackage.basicsTestNG">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestPackage.basicsTestNG@4d1c00d0]" started-at="2024-06-28T09:09:32 IST" name="beforeTest" finished-at="2024-06-28T09:09:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="Demo1()[pri:0, instance:TestPackage.basicsTestNG@4d1c00d0]" started-at="2024-06-28T09:09:32 IST" name="Demo1" finished-at="2024-06-28T09:09:32 IST" duration-ms="117" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable must exist: D:\Selenium\Setup\chromedriver.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable must exist: D:\Selenium\Setup\chromedriver.exe
+at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:345)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:160)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:155)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:450)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:128)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at TestPackage.basicsTestNG.Demo1(basicsTestNG.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo1 -->
+        <test-method signature="Demo2()[pri:0, instance:TestPackage.basicsTestNG@4d1c00d0]" started-at="2024-06-28T09:09:32 IST" name="Demo2" finished-at="2024-06-28T09:09:32 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo2 -->
+        <test-method signature="Demo3()[pri:0, instance:TestPackage.basicsTestNG@4d1c00d0]" started-at="2024-06-28T09:09:32 IST" name="Demo3" finished-at="2024-06-28T09:09:32 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo3 -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestPackage.basicsTestNG@4d1c00d0]" started-at="2024-06-28T09:09:32 IST" name="afterTest" finished-at="2024-06-28T09:09:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- TestPackage.basicsTestNG -->
+    </test> <!-- BasicTestCases -->
+    <test started-at="2024-06-28T09:09:33 IST" name="AdvancedTestCases" finished-at="2024-06-28T09:09:33 IST" duration-ms="89">
       <class name="TestPackage.advancedTestNG3">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestPackage.advancedTestNG3@5bda8e08]" started-at="2024-05-16T14:03:33 IST" name="beforeClass" finished-at="2024-05-16T14:03:33 IST" duration-ms="32" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestPackage.advancedTestNG3@399c4be1]" started-at="2024-06-28T09:09:33 IST" name="beforeClass" finished-at="2024-06-28T09:09:33 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="methodRandom()[pri:0, instance:TestPackage.advancedTestNG3@5bda8e08]" started-at="2024-05-16T14:03:33 IST" name="methodRandom" finished-at="2024-05-16T14:03:33 IST" duration-ms="18" status="PASS">
+        <test-method signature="methodRandom()[pri:0, instance:TestPackage.advancedTestNG3@399c4be1]" started-at="2024-06-28T09:09:33 IST" name="methodRandom" finished-at="2024-06-28T09:09:33 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodRandom -->
-        <test-method signature="typeRandom()[pri:3, instance:TestPackage.advancedTestNG3@5bda8e08]" started-at="2024-05-16T14:03:33 IST" name="typeRandom" finished-at="2024-05-16T14:03:33 IST" duration-ms="5" status="PASS">
+        <test-method signature="typeRandom()[pri:3, instance:TestPackage.advancedTestNG3@399c4be1]" started-at="2024-06-28T09:09:33 IST" name="typeRandom" finished-at="2024-06-28T09:09:33 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- typeRandom -->
-        <test-method signature="abcRandom()[pri:7, instance:TestPackage.advancedTestNG3@5bda8e08]" started-at="2024-05-16T14:03:33 IST" name="abcRandom" finished-at="2024-05-16T14:03:33 IST" duration-ms="6" status="PASS">
+        <test-method signature="abcRandom()[pri:7, instance:TestPackage.advancedTestNG3@399c4be1]" started-at="2024-06-28T09:09:33 IST" name="abcRandom" finished-at="2024-06-28T09:09:33 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- abcRandom -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestPackage.advancedTestNG3@5bda8e08]" started-at="2024-05-16T14:03:33 IST" name="afterClass" finished-at="2024-05-16T14:03:33 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestPackage.advancedTestNG3@399c4be1]" started-at="2024-06-28T09:09:33 IST" name="afterClass" finished-at="2024-06-28T09:09:33 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- TestPackage.advancedTestNG3 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="TestPackage.advancedTestNG4">
+        <test-method signature="Demo1()[pri:0, instance:TestPackage.advancedTestNG4@291caca8]" started-at="2024-06-28T09:09:33 IST" name="Demo1" finished-at="2024-06-28T09:09:33 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo1 -->
+        <test-method is-config="true" signature="beforeGroup()[pri:0, instance:TestPackage.advancedTestNG4@291caca8]" started-at="2024-06-28T09:09:33 IST" name="beforeGroup" finished-at="2024-06-28T09:09:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeGroup -->
+        <test-method signature="Demo2()[pri:0, instance:TestPackage.advancedTestNG4@291caca8]" started-at="2024-06-28T09:09:33 IST" name="Demo2" finished-at="2024-06-28T09:09:33 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo2 -->
+        <test-method is-config="true" signature="afterGroup()[pri:0, instance:TestPackage.advancedTestNG4@291caca8]" started-at="2024-06-28T09:09:33 IST" name="afterGroup" finished-at="2024-06-28T09:09:33 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterGroup -->
+        <test-method signature="Demo3()[pri:0, instance:TestPackage.advancedTestNG4@291caca8]" started-at="2024-06-28T09:09:33 IST" name="Demo3" description="This is demo3" finished-at="2024-06-28T09:09:33 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo3 -->
+      </class> <!-- TestPackage.advancedTestNG4 -->
+      <class name="TestPackage.basicTestNG2">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:32 IST" name="beforeSuite" finished-at="2024-06-28T09:09:32 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestPackage.basicTestNG2@3d285d7e]" started-at="2024-06-28T09:09:33 IST" name="afterSuite" finished-at="2024-06-28T09:09:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- TestPackage.basicTestNG2 -->
+      <class name="TestPackage.basicsTestNG">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:TestPackage.basicsTestNG@4d1c00d0]" started-at="2024-06-28T09:09:32 IST" name="beforeSuite" finished-at="2024-06-28T09:09:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestPackage.basicsTestNG@4d1c00d0]" started-at="2024-06-28T09:09:33 IST" name="afterSuite" finished-at="2024-06-28T09:09:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- TestPackage.basicsTestNG -->
+    </test> <!-- AdvancedTestCases -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -5,7 +5,9 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterGroups;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -52,5 +54,7 @@ public class advancedTestNG4 {
 		System.out.println("AFTER GROUP SMOKE TEST IS EXECUTED");
 		
 	}
+	
+	
 
 }

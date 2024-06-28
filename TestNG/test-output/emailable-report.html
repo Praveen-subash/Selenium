@@ -8,13 +8,47 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">178</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">BasicTestCases</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">305</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">AdvancedTestCases</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">89</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">10</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">394</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">TestPackage.advancedTestNG3</td><td><a href="#m0">abcRandom</a></td><td rowspan="1">1715848413881</td><td rowspan="1">6</td></tr><tr class="passedeven"><td><a href="#m1">methodRandom</a></td><td rowspan="1">1715848413836</td><td rowspan="1">18</td></tr><tr class="passedeven"><td><a href="#m2">typeRandom</a></td><td rowspan="1">1715848413868</td><td rowspan="1">5</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">BasicTestCases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestPackage.basicTestNG2</td><td><a href="#m0">Demo1</a></td><td rowspan="1">1719545972847</td><td rowspan="1">12</td></tr><tr class="failedodd"><td rowspan="1">TestPackage.basicsTestNG</td><td><a href="#m1">Demo1</a></td><td rowspan="1">1719545972681</td><td rowspan="1">117</td></tr><tr><th colspan="4">BasicTestCases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestPackage.basicTestNG2</td><td><a href="#m2">Demo2</a></td><td rowspan="1">1719545972871</td><td rowspan="1">3</td></tr><tr class="passedeven"><td><a href="#m3">Demo3</a></td><td rowspan="1">1719545972880</td><td rowspan="1">5</td></tr><tr class="passedodd"><td rowspan="2">TestPackage.basicsTestNG</td><td><a href="#m4">Demo2</a></td><td rowspan="1">1719545972813</td><td rowspan="1">7</td></tr><tr class="passedodd"><td><a href="#m5">Demo3</a></td><td rowspan="1">1719545972828</td><td rowspan="1">4</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">AdvancedTestCases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">TestPackage.advancedTestNG3</td><td><a href="#m6">abcRandom</a></td><td rowspan="1">1719545973120</td><td rowspan="1">12</td></tr><tr class="passedeven"><td><a href="#m7">methodRandom</a></td><td rowspan="1">1719545973101</td><td rowspan="1">3</td></tr><tr class="passedeven"><td><a href="#m8">typeRandom</a></td><td rowspan="1">1719545973114</td><td rowspan="1">3</td></tr><tr class="passedodd"><td rowspan="3">TestPackage.advancedTestNG4</td><td><a href="#m9">Demo1</a></td><td rowspan="1">1719545973140</td><td rowspan="1">5</td></tr><tr class="passedodd"><td><a href="#m10">Demo2</a></td><td rowspan="1">1719545973158</td><td rowspan="1">5</td></tr><tr class="passedodd"><td><a href="#m11">Demo3</a></td><td rowspan="1">1719545973176</td><td rowspan="1">2</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">TestPackage.advancedTestNG3#abcRandom</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestPackage.advancedTestNG3#methodRandom</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">TestPackage.advancedTestNG3#typeRandom</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BasicTestCases</h2><h3 id="m0">TestPackage.basicTestNG2#Demo1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable must exist: D:\Selenium\Setup\chromedriver.exe
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:345)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:160)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:155)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:450)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:128)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:49)
+	at TestPackage.basicTestNG2.Demo1(basicTestNG2.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestPackage.basicsTestNG#Demo1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable must exist: D:\Selenium\Setup\chromedriver.exe
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:345)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:160)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:155)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:450)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:128)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:49)
+	at TestPackage.basicsTestNG.Demo1(basicsTestNG.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestPackage.basicTestNG2#Demo2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestPackage.basicTestNG2#Demo3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">TestPackage.basicsTestNG#Demo2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">TestPackage.basicsTestNG#Demo3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>AdvancedTestCases</h2><h3 id="m6">TestPackage.advancedTestNG3#abcRandom</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">TestPackage.advancedTestNG3#methodRandom</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">TestPackage.advancedTestNG3#typeRandom</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">TestPackage.advancedTestNG4#Demo1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">TestPackage.advancedTestNG4#Demo2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">TestPackage.advancedTestNG4#Demo3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

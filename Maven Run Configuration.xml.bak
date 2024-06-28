@@ -1,0 +1,320 @@
+
+-------------------- Different Methods to Run Tests from Maven ------------------------------
+
+CASE 1: When there are 2 tests - one with suffix 'Test' and another without 'Test' Suffix.
+
+Note: No Changes in the pom.xml file.
+
+Run the tests with maven command "mvn clean test" 
+
+-only the test cases with suffix 'Test' will be picked up by surefire plugin.
+-Surefire plugin is designed in such a way that, it will run the test cases with suffix 'Test'.
+-Testcases without suffix 'Test' will be ignored
+
+
+CASE 2 : Run individual/particular test in maven
+
+command: mvn test -Dtestname="testname.java" | Example: mvn test -Dtestname = "ArrayTest.java".
+
+
+
+CASE 3: When there are 2 tests - one with suffix 'Test' and another without 'Test' Suffix.
+
+Note: Including the tests using general expression in pom.xml (overriding the surefire plugin function)
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+				
+				<!-- using general expression with include tags to run all the test in the package -->
+					<includes>
+						<include>**/*</include>
+					</includes>				
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+Run the tests with maven command "mvn clean test" 
+
+- Both the test cases i.e.with and without suffix 'Test' will run successfully.
+
+
+
+
+CASE 4: When there are 2 tests - one with suffix 'Test' and another without 'Test' Suffix | Create a testng.xml for the suite | add the testng.xml suite in pom.xml
+
+Note: create a testng.xml for the suite and add the testng.xml within <suiteXmlfiles> tag in pom.xml (overriding the surefire plugin function)
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+				
+					<!-- include the testng suitexml file  -->
+					<suiteXmlFiles>
+					  <suiteXmlFile> testng.xml </suiteXmlFile>
+					</suiteXmlFiles>
+				
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+Run the tests with maven command "mvn clean test" 
+
+- Both the test cases i.e.with and without suffix 'Test' will run successfully. This will include all the testcases in the testng suite.
+
+
+CASE 4.1 ---------- To run the TestNG xml file using Property reference "${testngxmlname}" in pom.xml ---------------
+	  
+- Reference the testngxml name in <suiteXmlFile> tag.
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<!-- include the testng suitexml file  -->
+					<suiteXmlFiles>
+						<suiteXmlFile>${testngxmlname}</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+    
+Run the maven command: mvn clean test -Dtestngxmlname="testng.xml" <!-- this is used to avoid the hardcording of path. useful while running the test from jenkins -->
+
+this will trigger the testng.xml. this in turn will run all the tests in the testng xml suite.
+
+
+CASE 5: Run Cucumber Tests from Maven.
+
+Method 1: By adding the testrunner file within <includes> tag in pom.xml. this will run all the feature files(test cases) in the test runner class
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<includes>
+						<include>**/testRunner.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+Run the tests with maven command "mvn clean test" 
+
+This will run all the features (cucumber tests) in the test runner class.
+
+
+Method 2: By adding the cucumber testrunner file in testng.xml and add the testng.xml in <suiteXmlFiles> tag in pom.xml
+
+Pre-Requisite:
+- Comment the cucumber Junit dependency
+- version of cucumber tetsng and testng maven dependencies should be same.
+
+   ----- Pass the testng.xml within <suiteXmlFile> tag in pom.xml ------
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<!-- include the testng suitexml file  -->
+					<suiteXmlFiles>
+						<suiteXmlFile> testng.xml </suiteXmlFile>
+					</suiteXmlFiles>
+
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	----- pass the packagename.classname in <class name/> tag in testng.xml file -----
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+	<suite name="Suite">
+	  <test thread-count="5" name="Test">
+			<classes>
+				<class name="packagename.classname"/>  ---- example: class name = "runner.CucumberRun"
+			</classes>
+	  </test> <!-- Test -->
+	</suite> <!-- Suite -->
+	
+
+This will run the cucumber tests from the testng.xml file. this can also be run by using maven command.
+
+
+
+Case 6: Defining the Dependencies version in <Properties> tag in pom.xml
+
+- By defining the version in the properties tag it becomes easy to maintain the versions of dependencies
+
+	<properties>
+        <selenium.version>4.8.0</selenium.version>
+	</properties>
+   
+   - passing it as a general expression in dependencies
+	<dependencies>
+	    <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+		</dependency>
+	</dependencies>
+
+Note: We can add all the versions/glues in <properties> tag
+
+
+
+
+case 7: systemPropertyVariables in pom.xml
+
+- pass parameters/configurations to your tests without hardcoding them into test classes
+- Easily change the configuration for different environments without modifying the test code
+
+
+	<configuration>
+		<systemPropertyVariables>
+			<name>vignesh</name>
+		</systemPropertyVariables>
+	</configuration>
+	
+Example: 
+
+	package SysPropVarDemo.SysPropVar;
+
+	import org.testng.annotations.Test;
+
+	public class SysVarDemo {
+	
+		@Test
+		
+		public void getName () {
+			System.out.println(System.getProperty("name"));
+	}
+
+}
+	
+	
+CASE 7.1: defining the paramter in a general expression and passing the value in maven command
+	
+ <configuration>
+		<systemPropertyVariables>
+			<name>${mynameValue}</name>
+		</systemPropertyVariables>
+	</configuration>
+	
+	mvn clean test -DmynameValue="Vignesh"
+	
+Example: 
+
+	package SysPropVarDemo.SysPropVar;
+
+	import org.testng.annotations.Test;
+
+	public class SysVarDemo {
+	
+		@Test
+		
+		public void getName () {
+			System.out.println(System.getProperty("name"));
+	}
+
+}
+
+
+
+
+CASE 8: Profiling in Maven
+
+-  To customize the build process for different environments, such as development, testing, and production.
+
+ <profiles>
+        <profile>
+            <id>Smoke</id> <!-- for running only smoke test -->
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng-smoke.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+		
+		        <profile>
+            <id>Regression</id> <!-- for running only resgression test -->
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng-regression.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+		
+		<profile>
+            <id>all-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng-all.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+	
+-- To run tests with a specific profile, use the -P flag with the desired profile ID. 
+
+   For example:
+
+	 -Smoke tests: mvn clean test -PSmoke
+	 -Regression tests: mvn clean verify -PRegression
+	 -All tests: mvn clean test -Pall-tests
+ 
+ 
+This approach provides flexibility and control, ensuring that the right tests are run at the right time.
+
+
+
+
+
+
+ 

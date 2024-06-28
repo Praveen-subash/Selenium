@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="AdvancedTestCases(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="BasicTestCases(failed)">
     <classes>
-      <class name="TestPackage.advancedTestNG3">
+      <class name="TestPackage.basicsTestNG">
         <methods>
-          <include name="beforeClass"/>
-          <include name="abcRandom"/>
-          <include name="afterClass"/>
-          <include name="methodRandom"/>
-          <include name="typeRandom"/>
+          <include name="beforeTest"/>
+          <include name="afterSuite"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="Demo1"/>
         </methods>
-      </class> <!-- TestPackage.advancedTestNG3 -->
+      </class> <!-- TestPackage.basicsTestNG -->
+      <class name="TestPackage.basicTestNG2">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="Demo1"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- TestPackage.basicTestNG2 -->
     </classes>
-  </test> <!-- AdvancedTestCases(failed) -->
+  </test> <!-- BasicTestCases(failed) -->
 </suite> <!-- Failed suite [Suite] -->
