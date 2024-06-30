@@ -10,6 +10,7 @@ abstract class Boom{
 
    public void sound(){
 	System.out.println("Woof");
+	
    }
  } 
  

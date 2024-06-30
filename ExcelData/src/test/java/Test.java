@@ -14,21 +14,22 @@ public class Test {
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		
-	
-		FileInputStream fis = new  FileInputStream("D:\\Selenium\\ExcelData\\data.xlsx");
 		
+		
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\data.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		
-		int size = workbook.getNumberOfSheets();
+		int n = workbook.getNumberOfSheets();
 		
-		int k,column = 0;
+		int column=0,k=0;
 		
-		for(int i=0;i<size;i++) {
+		
+		for(int i=0;i<n;i++) {
+			
+			String s = workbook.getSheetName(i);
 			
 			
-			String sheetName = workbook.getSheetName(i);
-			
-			if(sheetName.equals("Sheet2")) {
+			if(s.equals("Sheet2")) {
 				
 				XSSFSheet sheet = workbook.getSheetAt(i);
 				
@@ -36,60 +37,60 @@ public class Test {
 				
 				Row firstRow = allRows.next();
 				
-				Iterator<Cell> cell =  firstRow.cellIterator();
+				Iterator<Cell> cv = firstRow.cellIterator();
 				
-				
-				
-				while(cell.hasNext()) {
+				while(cv.hasNext()) {
 					
+					Cell c = cv.next();
 					
-					Cell cv = cell.next();
-					
-					System.out.println(cv);
-					
-					if(cv.getStringCellValue().equals("Name")) {
+					if(c.getStringCellValue().toString().equals("Name")){
 						
-						System.out.println("======");
-						break;
+						column=k;
 						
 					}
 					
-					else {
-						
-						column++;
-					}
+					k++;
 					
 					
 				}
+				
+				System.out.println(column);
+				
+				//
 				
 				while(allRows.hasNext()) {
 					
 					Row r = allRows.next();
-					System.out.println(column);
-					if(r.getCell(column).getStringCellValue().equals("Pyara")) {
+					
+					if(r.getCell(column).getStringCellValue().equals("Krishna")) {
 						
+						Iterator<Cell> cs = r.cellIterator();
 						
-						Iterator<Cell> v = r.cellIterator();
-						
-						while(v.hasNext()) {
+						while(cs.hasNext()) {
 							
-							System.out.println(v.next());
 							
+							System.out.println(cs.next());
 						}
+						
+						
 					}
+					
+					
+					
+					
+					
+					
 					
 					
 				}
 				
-					
+				
 				
 			}
 			
-			
 		}
 		
-		
-
-	}
+	
+		}
 
 }

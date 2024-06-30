@@ -31,6 +31,11 @@ public class Sort_HashMap_By_Keys {
 	         
 	      }
 	      
+	      for(Map.Entry me:hashmap.entrySet()) {
+	    	  
+	    	  System.out.println(me.getKey()+"-----"+me.getValue());
+	    	  
+	      }
 	      System.out.println(list);
 	      Collections.sort(list);
 	      Collections.reverse(list);

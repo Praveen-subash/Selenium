@@ -8,6 +8,7 @@ import com.UserDefinedPackage.*;
 		// TODO Auto-generated method stub
 		
 		//Invalid since protected members can be accessed from outside package only in child classes with child reference Only
+		
 		//ProtectedModifier obj = new ProtectedModifier();
 		//obj.m1();
 		

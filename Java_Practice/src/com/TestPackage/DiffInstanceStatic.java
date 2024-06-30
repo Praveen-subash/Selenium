@@ -13,6 +13,7 @@ public class DiffInstanceStatic {
 		DiffInstanceStatic obj = new DiffInstanceStatic();
 		System.out.println(obj.y);
 		
+		
 
 	}
 	

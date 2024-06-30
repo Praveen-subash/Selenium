@@ -40,7 +40,7 @@ public class test {
 		driver.findElement(By.id("Accepted Elements")).click();
 		
 		//driver.switchTo().frame(driver.findElement(By.xpath("//div[@rel-title='Accepted Elements']/p/iframe")));
-		driver.switchTo().frame(0);
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 		
 		WebDriverWait w = new WebDriverWait(driver,Duration.ofSeconds(10));
 		w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[text()='Drag me to my target']")));
